@@ -1,0 +1,9 @@
+tensorflow
+pandas
+sklearn
+keras
+matplotlib
+numpy
+flask
+io
+base64
