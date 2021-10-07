@@ -5,5 +5,4 @@ keras
 matplotlib
 numpy
 flask
-io
-base64
+
