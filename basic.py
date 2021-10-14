@@ -10,6 +10,7 @@ from matplotlib.figure import Figure
 from sklearn.metrics import confusion_matrix, accuracy_score
 import io
 from sklearn.preprocessing import MinMaxScaler
+from flask import send_file
 
 
 app = Flask(__name__)
@@ -160,7 +161,9 @@ def data():
     data_df = yf.download(company, start, end)
     d = company + '.csv'
     data_df.to_csv(d)
-    return c
+    # return render_template('after.html')
+    # return c
+    return send_file(d, mimetype='text/csv', attachment_filename=d, as_attachment=True)
 
 
 if __name__ == "__main__":
