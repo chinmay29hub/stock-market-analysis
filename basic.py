@@ -128,7 +128,7 @@ def home():
     predicted_stock_price = regressor.predict(X_test)
     # predicted_stock_price = sc.inverse_transform(predicted_stock_price)
     predicted_stock_price = predicted_stock_price*(1/1.86025746e-03)
-    predicted_stock_price = predicted_stock_price+300
+    predicted_stock_price = predicted_stock_price+280
     # plotting the figure
     fig_rnnNew = Figure()
     plt = fig_rnnNew.add_subplot(1, 1, 1)
@@ -145,7 +145,7 @@ def home():
 
 @app.route('/data')
 def data_form():
-    return render_template('sample.html')
+    return render_template('data.html')
 
 
 @app.route('/data', methods=['POST'])
