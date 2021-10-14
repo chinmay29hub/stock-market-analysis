@@ -97,7 +97,7 @@ def home():
     # all stock prices will be between 0 and 1
     sc = MinMaxScaler(feature_range=(0, 1))
     training_set_scaled = sc.fit_transform(training_set)
-    print(training_set_scaled)
+    # print(training_set_scaled)
 
     """### Creating a data structure with 60 timesteps and 1 output
 
